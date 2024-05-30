@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Day 3 Bootstrap</title>
+  </head>
+  <body>
+    <header>
+      <!-- Nav 1 -->
+      <ul class="nav justify-content-end bg-danger px-5">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Gift Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Track Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <!-- Nav 2 -->
+      <nav class="navbar">
+        <a class="navbar-brand pl-4">
+          <img
+            style="width: 250px"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+        </a>
+        <form class="form-inline">
+          <input
+            class="form-control mr-2 pr-5"
+            type="search"
+            placeholder="Cari di Shop"
+            aria-label="Search"
+          />
+          <button class="btn btn-danger  mr-5" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </nav>
+
+      <!-- Nav 3 -->
+      <ul class="nav justify-content-center bg-danger mb-4 mx-5">
+        <li class="nav-item">
+          <a class="nav-link text-white mr-3" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mr-3" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mr-3" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white">About Us</a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Side Bar Kiri -->
+        <div class="col-3">
+          <ul class="list-group">
+            <h4 class="text-danger">Kategori</h4>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-tablet"></i> Handphone & Tablet</a></li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-laptop"></i> Komputer & Laptop</li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-headphones"></i> Headphone & Musik</li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-receipt"></i> Top up & Tagihan</li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-airplane"></i> Travel & Entertainment</li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-house"></i> Perlengkapan Rumah</li>
+            <li class="list-group-item bg-light text-danger"><i class="bi bi-backpack"></i> Perlengkapan Sekolah</li>
+          </ul>
+        </div>
+        
+        <!-- Carousel -->
+        <div class="col-6">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://cf.shopee.co.id/file/id-50009109-3bdd2ab83732350ba177fab8f5b4ab1f_xxhdpi"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://cf.shopee.co.id/file/id-50009109-bd2b4feeff22250a33174629aa228b4b_xxhdpi"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.static-src.com/siva/asset/05_2024/desktop-car5-enfa-may7.jpg?w=960"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-target="#carouselExampleControls"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-target="#carouselExampleControls"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+
+          <!-- Product Card -->
+          <div class="row my-3">
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-luvpmqnhsqrtb9"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="bg-light mx-1">
+                  <p class=""><b>ASUS ROG STRIX G15 G513RM AMD RYZEN 7 6800H 32GB DDR5 2TB SSD RTX3060-6GB 15.6" WQHD 165HZ RGB WIN11HOME</b><p>
+                    <p>⭐4.9 | Terjual 27</p>
+                    <p class="card-text"><b>Rp16.299.000</b></p>
+                  </p>  
+                  <a href="#" class="btn btn-danger btn-block">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lnjfvq19d47a5d"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="bg-light mx-1">
+                    <p class=""><b>iQOO Z7x (8/256) - 80 watt + 6000 mAH, Snapdragon 695, 5 Layer Liquid Cooling System</b><p>
+                        <p>⭐5.0 | Terjua l4,2RB</p>
+                        <p class="card-text"><b>Rp2.999.000</b></p>
+                      </p>  
+                  <a href="#" class="btn btn-danger btn-block">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img
+                  src="https://down-id.img.susercontent.com/file/id-11134207-7qul4-lhn9q68wtc6i49"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="bg-light mx-1">
+                    <p class=""><b>KIVEE Powerbank 20000 mah Fast Charging Power Bank 10000 mah Mini Type C Micro Dual input Original</b><p>
+                      <p>⭐4.8 | Terjual 1,2RB</p>
+                      <p class="card-text"><b>Rp159.000</b></p>
+                    </p>  
+                  <a href="#" class="btn btn-danger btn-block">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Bar Kanan -->
+        <div class="col-3">
+          <ul class="list-group">
+            <h4 class="text-danger">Filter</h4>
+            <p><b>lokasi</b></p>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> jakarta</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> riau</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> kepri</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> sumbar</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> sumut</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> sulsel</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> aceh</li>
+            <li class="list-group-item"><input type="checkbox" name="" id=""> palembang</li>
+
+            
+            
+          </ul>
+<br>
+          <form class="my-2">
+            <h4 class="text-danger">Login</h4>
+            <div class="form-group">
+            </div>
+            <label for="email">email</label><br>
+            <input type="email" name="" id="">
+            <label for="password">password</label><br>
+            <input type="password" name="" id=""><br>
+            <button type="submit" class="btn btn-danger mt-2">Login</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="card">
+        <h5 class="card-header bg-danger text-white">Shop.com</h5>
+        <div class="card-body mx-auto">            
+          <p class="">Copyright © by PT. Shop indonesia.</p>
+          <img class="" src="img/footer.png" alt="">
+        </div>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
